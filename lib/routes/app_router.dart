@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import  'app_router.gr.dart';
 
-@AutoRouterConfig()
+@AutoRouterConfig(replaceInRouteName: 'Page|Dialog|Screen,Route')
 class AppRouter extends RootStackRouter{
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: RouteA.page, initial: true),
-    AutoRoute(page: RouteB.page),
-    AutoRoute(page: RouteC.page),
+    AutoRoute(page: LandingRoute.page, initial: true),
+    AutoRoute(page: SecondRoute.page),
+    AutoRoute(page: ThirdRoute.page),
   ];
    
 }
